@@ -34,7 +34,7 @@ jobs:
           args: >
             -Dsonar.projectKey=purush
             -Dsonar.projectName=purush
-            -Dsonar.sources=src
+            -Dsonar.sources=frontend
 
       # ######################################################
       # # Quality Gate
