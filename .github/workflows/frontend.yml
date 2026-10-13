@@ -28,12 +28,12 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONT }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=purush
-            -Dsonar.projectName=purush
+            -Dsonar.projectKey=purush-front
+            -Dsonar.projectName=purush-front
             -Dsonar.sources=frontend
 
       # ######################################################
