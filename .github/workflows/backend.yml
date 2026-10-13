@@ -61,8 +61,8 @@ jobs:
           script: |
             set -e
             APP_DIR=/home/ec2-user/app
-            REPO_NAME=Java-springboot-project
-            REPO_URL=https://github.com/CloudTechDevOps/Java-springboot-project.git
+            REPO_NAME=Java-springboot-project1
+            REPO_URL=https://github.com/Purush-web/Java-springboot-project1.git
             mkdir -p $APP_DIR
             cd $APP_DIR
             if [ -d "$REPO_NAME/.git" ]; then
@@ -81,7 +81,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            cd /home/ec2-user/app/Java-springboot-project/backend
+            cd /home/ec2-user/app/Java-springboot-project1/backend
             mvn clean package -DskipTests -U
 
       - name: Stop Old Application
@@ -120,7 +120,7 @@ jobs:
             LOG_DIR=/var/log/app
             sudo mkdir -p $LOG_DIR
             sudo chown ec2-user:ec2-user $LOG_DIR
-            cd /home/ec2-user/app/Java-springboot-project/backend/target
+            cd /home/ec2-user/app/Java-springboot-project1/backend/target
             nohup env \
               MYSQL_HOST=${{ secrets.DB_HOST }} \
               MYSQL_PORT=3306 \
