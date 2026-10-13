@@ -32,8 +32,8 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
           args: >
-            -Dsonar.projectKey=frontend
-            -Dsonar.projectName=frontend
+            -Dsonar.projectKey=purush
+            -Dsonar.projectName=purush
             -Dsonar.sources=frontend
 
       # ######################################################
